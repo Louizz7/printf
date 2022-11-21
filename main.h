@@ -16,25 +16,24 @@
 #define S_SHORT 1
 
 /**
-struct fmt - Struct op
-@fmt: format
-@fn: function to be associated.
- * struct structprint - structure containing
- * @q: the location and method to translate data to characters.
- * @u: print function for specific type.
- * Return: int
- */
+* struct fmt - Struct op
+* @fmt: format
+* @fn: function to be associated.
+* struct structprint - structure containing
+* @q: the location and method to translate data to characters.
+* @u: print function for specific type.
+* Return: int
+*/
 struct fmt
 {
-<<<<<<< HEAD
 char fmt;
 int (*fn)(va_list, char[], int, int, int, int);
 };
 /**
-typedef struct fmt fmt_t - Struct op
-@fmt: format.
-@fm_t: function to be associated.
- */
+* typedef struct fmt fmt_t - Struct op
+* @fmt: format.
+* @fm_t: function to be associated.
+*/
 typedef struct fmt fmt_t;
 int _printf(const char *format, ...);
 int handle_print(const char *fmt, int *i,
@@ -97,11 +96,10 @@ int append_hexa_code(char, char[], int);
 int is_digit(char);
 long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
-=======
 	char *q;
 	int (*u)(char *format, va_list);
-} structype;
 
+int structype;
 /**
  * _printf - prints formatted data
  * @ch: print function
@@ -122,7 +120,6 @@ int printhex(char *format, va_list);
 int printHEX(char *format, va_list);
 int printocta(char *format, va_list);
 int print_unsign(char *format, va_list);
-int _printf(char *format, ...);
+int _printf(const char *format, ...);
 
->>>>>>> fd1a89da1b43c9142c691afe79951018cf333f01
 #endif
