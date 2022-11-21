@@ -1,16 +1,17 @@
 #include "main.h"
 void print_buffer(char buffer[], int *buff_ind);
 /**
-_printf - program for printf function
-@format: format
-Return: characters to be printed
- */
+*_printf - program for printf function
+* @format: format
+* Return: characters to be printed
+*/
 int _printf(const char *format, ...)
 {
 	int i, printed = 0, printed_chars = 0;
 	int flags, width, precision, size, buff_ind = 0;
 	va_list list;
 	char buffer[BUFF_SIZE];
+
 	if (format == NULL)
 		return (-1);
 	va_start(list, format);
@@ -44,10 +45,10 @@ int _printf(const char *format, ...)
 	return (printed_chars);
 }
 /**
-print_buffer - program that prints the contents of the buffer if it exist
-@buffer: Array of characters
-@buff_ind: Index at which to add next character
- */
+* print_buffer - program that prints the contents of the buffer if it exist
+* @buffer: Array of characters
+* @buff_ind: Index at which to add next character
+*/
 void print_buffer(char buffer[], int *buff_ind)
 {
 	if (*buff_ind > 0)
