@@ -14,17 +14,15 @@
 /* SIZES */
 #define S_LONG 2
 #define S_SHORT 1
+
 /**
-<<<<<<< HEAD
 struct fmt - Struct op
 @fmt: format
 @fn: function to be associated.
-=======
  * struct structprint - structure containing
  * @q: the location and method to translate data to characters.
  * @u: print function for specific type.
  * Return: int
->>>>>>> fd1a89da1b43c9142c691afe79951018cf333f01
  */
 struct fmt
 {
