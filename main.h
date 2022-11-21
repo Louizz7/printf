@@ -37,6 +37,6 @@ int printhex(char *format, va_list);
 int printHEX(char *format, va_list);
 int printocta(char *format, va_list);
 int print_unsign(char *format, va_list);
-int _printf(const char *format, ...)
+int _printf(char *format, ...);
 
 #endif
