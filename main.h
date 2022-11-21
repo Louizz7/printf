@@ -9,7 +9,6 @@
  * struct structprint - structure containing
  * @q: the location and method to translate data to characters.
  * @u: print function for specific type.
- *
  * Return: int
  */
 typedef struct structprint
@@ -17,6 +16,12 @@ typedef struct structprint
 	char *q;
 	int (*u)(char *format, va_list);
 } structype;
+
+/**
+ * _printf - prints formatted data
+ * @ch: print function
+ * Return: int
+*/
 
 int _putchar(char ch);
 int _puts(char *string);
