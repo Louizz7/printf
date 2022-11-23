@@ -26,11 +26,13 @@ int print_pointer(va_list types, char buffer[],
 
 	if (addrs == NULL)
 		return (write(1, "(nil)", 5));
+
 	buffer[BUFF_SIZE - 1] = '\0';
 	UNUSED(precision);
 	num_addrs = (unsigned long)addrs;
 
 	while (num_addrs > 0)
+	{
 		buffer[ind--] = map_to[num_addrs % 16];
 	num_addrs /= 16;
 	length++;
